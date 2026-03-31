@@ -3,96 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Póster Científico - Dr. Rafael Mendoza</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Póster Científico - Anita Conti</title>
     <style>
-  .gallery-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 10px;
-  }
-  .gallery-grid img {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 2px solid #0077b6;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  }
-</style>
-    </head>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; color: #333; line-height: 1.4; }
+
+        /* Banner Azul Superior */
+        .blue-banner {
+            background-color: #005f73;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #0a9396;
+        }
+        .header-main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border: 3px solid white;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Contenedor Principal en 2 Columnas (como en tu PC) */
+        .main-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr; /* Columna grande izquierda, pequeña derecha */
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+        }
+
+        h3 { color: #005f73; font-size: 0.9rem; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        p, li { font-size: 0.85rem; text-align: justify; }
+
+        /* Registro Fotográfico (Imágenes más grandes) */
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .gallery-grid img {
+            width: 100%; /* En móvil ocuparán buen espacio */
+            max-width: 180px; 
+            height: 130px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* --- ESTO ES LO QUE HACE QUE EN EL CELULAR SE VEA LINDO --- */
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr; /* En el tlf, la columna derecha pasa abajo de la biografía */
+            }
+            .gallery-grid img {
+                max-width: 45%; /* En el tlf salen 2 por fila, pero grandecitas */
+                height: 150px;
+            }
+            .blue-banner h1 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
 <body>
-    <div class="app-wrapper">
-        <header class="main-header">
-            <div class="header-content">
-                <span class="header-badge">PROYECTO AMBIENTAL 2026</span>
-                <h1> Ciencia, mar y coraje: El legado de Anita Conti</h1>
-            </div>
-        </header>
 
-        <div class="content-layout">
-            <aside class="col-left">
-                <section class="card photo-card">
-                    <img src="descarga.jfif" alt="Dr. Rafael Mendoza" class="main-photo">
-                    <div class="photo-info">
-                        <h2>Anita Conti</h2>
-                <span class="tag">Oceanografa</span>
-                    </div>
-                </section>
-
-                <section class="card bio-card">
-                    <h3>Biografia</h3>Fue una destacada oceanógrafa, fotógrafa y escritora francesa, reconocida como la primera mujer en ejercer profesionalmente la oceanografía en su país. A lo largo de su extensa carrera, se dedicó a documentar la vida en alta mar, participando en numerosas expediciones a bordo de barcos pesqueros en el Atlántico y el Ártico. A través de sus libros y fotografías, denunció de manera pionera los peligros de la pesca industrial descontrolada y el desperdicio de recursos marinos, convirtiéndose en una de las primeras voces ambientalistas en alertar sobre la sobrepesca. Su legado combina el rigor científico con una profunda sensibilidad artística para capturar la relación entre el ser humano y el océano</p>
-                </section>
-
-<section class="card gallery-card">
-  <h3>Registro Fotográfico</h3>
-  <div class="gallery-grid">
-    <img src="images.jfif" alt="Campo 1">
-    <img src="descarga (3).jfif" alt="Campo 2">
-    <img src="descarga (4).jfif" alt="Campo 3">
-    <img src="descarga (5).jfif" alt="Campo 4">
-    <img src="cuenca.jpg" alt="Cuenca de Cariaco">
-  </div>
-</section>
-            </aside>
-
-            <main class="col-right">
-                <section class="card school-card">
-                    <h3>Institución y Autores</h3>
-                    <div class="school-info">
-                        <p><strong>Colegio:</strong> Unidad Educativa Tulio Febres Cordero</p>
-                        <p><strong>Grado:</strong> 5to Año - Sección "B"</p>
-                        <p><strong>Estudiantes:</strong> Maria Reyes, Iñaky Quiñones, David Alcantara,Annabella Paez.</p>
-                    </div>
-                </section>
-
-                <section class="card relevance-card">
-                    <h3>Aspectos Relevantes</h3>
-                    <ul>
-                        <li>La primera mujer en barcos de pesca árticos.</li>
-                        <li>La que avisó que nos estábamos acabando los peces.</li>
-                        <li>La fotógrafa que capturó tormentas y redes llenas.</li>
-                        <li>La científica que alimentó gente con aceite de tiburón en la guerra.</li>
-                    </ul>
-                </section>
-
-                <section class="card context-card">
-                    <h3>Contexto Venezolano</h3>
-                    <p>.El proyecto de referencia es la Expedición del Bacalao de 1939 en el Atlántico Norte donde Anita Conti utilizó por primera vez la relación entre la temperatura del agua y la profundidad para localizar bancos de peces. Tomamos este modelo para el proyecto venezolano de Cartas Dinámicas en la Cuenca de Cariaco porque permite transformar la pesca artesanal de Anzoátegui en una actividad de precisión científica. La implementación de sensores térmicos en los botes locales emula el trabajo de Conti al identificar las zonas de surgencia donde el agua fría y rica en nutrientes atrae a la sardina y al atún. Esta metodología es la base de nuestra propuesta porque ahorra combustible a los pescadores al eliminar la búsqueda al azar y protege el ecosistema al detectar áreas de estrés térmico.</p>
-                </section>
-
-                <section class="card conclusion-card">
-                    <h3>Conclusiones</h3>
-                    <p>La aplicación de su visión en Venezuela se traduce en pasar de la pesca al azar a la gestión científica del ecosistema marino. El uso de sensores térmicos y robótica accesible en botes artesanales permite identificar zonas de surgencia en Anzoátegui. Esta tecnología local ahorra combustible y protege las poblaciones de peces del estrés climático. La soberanía alimentaria depende de medir con precisión para no agotar el recurso. El legado de Conti en 2026 es transformar cada embarcación en un nodo de datos para la resiliencia costera..</p>
-                </section>
-            </main>
+<div class="blue-banner">
+    <p style="font-size: 0.7rem; letter-spacing: 2px;">PROYECTO AMBIENTAL 2026</p>
+    <h2>Ciencia, mar y coraje: El legado de Anita Conti</h2>
+    <div class="header-main">
+        <img src="anita.jpg" alt="Anita Conti" class="profile-img">
+        <div style="text-align: left;">
+            <h1 style="margin:0;">Anita Conti</h1>
+            <p style="margin:0; opacity: 0.9;">Oceanógrafa</p>
         </div>
-
-        <footer class="main-footer">
-            <p>Mención: Ciencias Biológicas | Caracas, Venezuela | © 2024 Venezuela Verde</p>
-        </footer>
     </div>
+</div>
+
+<div class="main-container">
+    <div class="left-column">
+        <section class="card">
+            <h3>BIOGRAFÍA</h3>
+            <p>Fue una destacada oceanógrafa, fotógrafa y escritora francesa, reconocida como la primera mujer en ejercer profesionalmente la oceanografía en su país. A través de sus libros y fotografías, denunció los peligros de la pesca industrial descontrolada...</p>
+        </section>
+
+        <section class="card">
+            <h3>REGISTRO FOTOGRÁFICO</h3>
+            <div class="gallery-grid">
+                <img src="images.jfif" alt="Foto 1">
+                <img src="descarga (3).jfif" alt="Foto 2">
+                <img src="descarga (4).jfif" alt="Foto 3">
+                <img src="descarga (5).jfif" alt="Foto 4">
+                <img src="cuenca.jpg" alt="Foto 5">
+            </div>
+        </section>
+    </div>
+
+    <div class="right-column">
+        <section class="card">
+            <h3>INSTITUCIÓN Y AUTORES</h3>
+            <p><strong>Colegio:</strong> Unidad Educativa Tulio Febres Cordero</p>
+            <p><strong>Grado:</strong> 5to Año - Sección "B"</p>
+        </section>
+
+        <section class="card">
+            <h3>ASPECTOS RELEVANTES</h3>
+            <ul style="padding-left: 15px;">
+                <li>Primera mujer en barcos de pesca.</li>
+                <li>Avisó sobre la sobrepesca.</li>
+                <li>Fotógrafa de tormentas.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>CONTEXTO VENEZOLANO</h3>
+            <p>El proyecto se enfoca en la Cuenca de Cariaco para transformar la pesca artesanal con tecnología y ciencia aplicada.</p>
+        </section>
+    </div>
+</div>
+
 </body>
 </html>
