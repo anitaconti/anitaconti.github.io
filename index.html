@@ -3,72 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Póster Científico - Anita Conti</title>
+    <title>Póster Científico - Dr. Rafael Mendoza</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* ESTO ARREGLA EL ESPACIO Y EL TAMAÑO EN EL CELULAR */
-        .gallery-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            padding: 10px;
-            width: 100%;
-        }
-
-        .gallery-grid img {
-            /* En el celular se verán GRANDES (ocupan casi todo el ancho) */
-            width: 90%; 
-            max-width: 280px; /* En PC se quedan de un tamaño elegante */
-            height: 200px;
-            object-fit: cover;
-            border-radius: 12px;
-            border: 3px solid #0077b6;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-
-        /* Ajuste para que el texto de la biografía se lea bien en el móvil */
-        .card.bio-card {
-            padding: 20px;
-            margin: 10px;
-            line-height: 1.6;
-        }
-    </style>
-</head>
+    </head>
 <body>
-
-<div class="app-wrapper">
-    <header class="main-header">
-        <div class="header-content">
-            <span class="header-badge">PROYECTO AMBIENTAL 2026</span>
-            <div class="profile-section">
-                <img src="anita.jpg" alt="Anita Conti" class="profile-img">
-                <div class="profile-info">
-                    <h1>Anita Conti</h1>
-                    <p class="subtitle">Oceanógrafa</p>
-                </div>
+    <div class="app-wrapper">
+        <header class="main-header">
+            <div class="header-content">
+                <span class="header-badge">PROYECTO AMBIENTAL 2026</span>
+                <h1> Ciencia, mar y coraje: El legado de Anita Conti</h1>
             </div>
+        </header>
+
+        <div class="content-layout">
+            <aside class="col-left">
+                <section class="card photo-card">
+                    <img src="descarga.jfif" alt="Dr. Rafael Mendoza" class="main-photo">
+                    <div class="photo-info">
+                        <h2>Anita Conti</h2>
+                <span class="tag">Oceanografa</span>
+                    </div>
+                </section>
+
+                <section class="card bio-card">
+                    <h3>Biografia</h3>Fue una destacada oceanógrafa, fotógrafa y escritora francesa, reconocida como la primera mujer en ejercer profesionalmente la oceanografía en su país. A lo largo de su extensa carrera, se dedicó a documentar la vida en alta mar, participando en numerosas expediciones a bordo de barcos pesqueros en el Atlántico y el Ártico. A través de sus libros y fotografías, denunció de manera pionera los peligros de la pesca industrial descontrolada y el desperdicio de recursos marinos, convirtiéndose en una de las primeras voces ambientalistas en alertar sobre la sobrepesca. Su legado combina el rigor científico con una profunda sensibilidad artística para capturar la relación entre el ser humano y el océano</p>
+                </section>
+
+<section class="card gallery-card">
+                    <h3>Registro Fotográfico</h3>
+              <div class="gallery-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+
+     <img src="images.jfif" alt="Campo 1" style="width: 280px; height: auto; border-radius: 8px; border: 2px solid #0077b6; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="descarga (3).jfif" alt="Campo 2" style="width: 280px; height: auto; border-radius: 8px; border: 2px solid #0077b6; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="descarga (4).jfif" alt="Campo 3" style="width: 280px; height: auto; border-radius: 8px; border: 2px solid #0077b6; margin: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+<img src="descarga (5).jfif" alt="Campo 4" style="width: 280px; height: auto; border-radius: 8px; border: 2px solid #0077b6; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+<img src="cuenca.jpg" alt="Cuenca de Cariaco" style="width: 280px; height: auto; border-radius: 8px; border: 2px solid #0077b6; margin: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                </section>
+            </aside>
+
+            <main class="col-right">
+                <section class="card school-card">
+                    <h3>Institución y Autores</h3>
+                    <div class="school-info">
+                        <p><strong>Colegio:</strong> Unidad Educativa Tulio Febres Cordero</p>
+                        <p><strong>Grado:</strong> 5to Año - Sección "B"</p>
+                        <p><strong>Estudiantes:</strong> Maria Reyes, Iñaky Quiñones, David Alcantara,Annabella Paez.</p>
+                    </div>
+                </section>
+
+                <section class="card relevance-card">
+                    <h3>Aspectos Relevantes</h3>
+                    <ul>
+                        <li>La primera mujer en barcos de pesca árticos.</li>
+                        <li>La que avisó que nos estábamos acabando los peces.</li>
+                        <li>La fotógrafa que capturó tormentas y redes llenas.</li>
+                        <li>La científica que alimentó gente con aceite de tiburón en la guerra.</li>
+                    </ul>
+                </section>
+
+                <section class="card context-card">
+                    <h3>Contexto Venezolano</h3>
+                    <p>.El proyecto de referencia es la Expedición del Bacalao de 1939 en el Atlántico Norte donde Anita Conti utilizó por primera vez la relación entre la temperatura del agua y la profundidad para localizar bancos de peces. Tomamos este modelo para el proyecto venezolano de Cartas Dinámicas en la Cuenca de Cariaco porque permite transformar la pesca artesanal de Anzoátegui en una actividad de precisión científica. La implementación de sensores térmicos en los botes locales emula el trabajo de Conti al identificar las zonas de surgencia donde el agua fría y rica en nutrientes atrae a la sardina y al atún. Esta metodología es la base de nuestra propuesta porque ahorra combustible a los pescadores al eliminar la búsqueda al azar y protege el ecosistema al detectar áreas de estrés térmico.</p>
+                </section>
+
+                <section class="card conclusion-card">
+                    <h3>Conclusiones</h3>
+                    <p>La aplicación de su visión en Venezuela se traduce en pasar de la pesca al azar a la gestión científica del ecosistema marino. El uso de sensores térmicos y robótica accesible en botes artesanales permite identificar zonas de surgencia en Anzoátegui. Esta tecnología local ahorra combustible y protege las poblaciones de peces del estrés climático. La soberanía alimentaria depende de medir con precisión para no agotar el recurso. El legado de Conti en 2026 es transformar cada embarcación en un nodo de datos para la resiliencia costera..</p>
+                </section>
+            </main>
         </div>
-    </header>
 
-    <main class="content-container">
-        <section class="card bio-card">
-            <h3>BIOGRAFÍA</h3>
-            <p>Fue una destacada oceanógrafa, fotógrafa y escritora francesa, reconocida como la primera mujer en ejercer profesionalmente la oceanografía en su país. A lo largo de su extensa carrera, se dedicó a documentar la vida en alta mar, participando en numerosas expediciones...</p>
-        </section>
-
-        <section class="card gallery-card">
-            <h3>REGISTRO FOTOGRÁFICO</h3>
-            <div class="gallery-grid">
-                <img src="images.jfif" alt="Foto 1">
-                <img src="descarga (3).jfif" alt="Foto 2">
-                <img src="descarga (4).jfif" alt="Foto 3">
-                <img src="descarga (5).jfif" alt="Foto 4">
-                <img src="cuenca.jpg" alt="Foto 5">
-            </div>
-        </section>
-    </main>
-</div>
-
+        <footer class="main-footer">
+            <p>Mención: Ciencias Biológicas | Caracas, Venezuela | © 2024 Venezuela Verde</p>
+        </footer>
+    </div>
 </body>
+</html>
 </html>
