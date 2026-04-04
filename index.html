@@ -4,62 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Póster Científico - Anita Conti</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px; color: #333; }
-        
-        /* Banner Azul (Tu diseño de la foto) */
-        .header-banner { background-color: #0077b6; color: white; padding: 20px; border-radius: 8px; text-align: center; margin-bottom: 20px; position: relative; }
-        .header-banner h1 { margin: 5px 0; font-size: 1.6rem; }
-        
-        /* Contenedor de dos columnas */
-        .main-container { display: flex; flex-wrap: wrap; gap: 20px; }
-        
-        /* Columna Izquierda (Bio y Fotos) */
-        .col-left { flex: 2; min-width: 350px; }
-        
-        /* Columna Derecha (Datos e Institución) */
-        .col-right { flex: 1; min-width: 300px; }
-        
-        /* Estilo de las tarjetas blancas */
-        .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 15px; border-top: 4px solid #0077b6; }
-        h3 { color: #0077b6; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-top: 0; font-size: 1rem; }
-        p { line-height: 1.5; text-align: justify; font-size: 0.9rem; }
-
-        /* --- GALERÍA PARA IMPRESIÓN --- */
+        /* ESTO ARREGLA EL ESPACIO Y EL TAMAÑO EN EL CELULAR */
         .gallery-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
             padding: 10px;
+            width: 100%;
         }
 
         .gallery-grid img {
-            /* TAMAÑO GRANDE PARA IMPRIMIR */
-            width: 280px; 
-            height: auto; /* Mantiene la forma original sin aplastarse */
-            border-radius: 8px;
+            /* En el celular se verán GRANDES (ocupan casi todo el ancho) */
+            width: 90%; 
+            max-width: 280px; /* En PC se quedan de un tamaño elegante */
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
             border: 3px solid #0077b6;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            background-color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Ajuste para que el texto de la biografía se lea bien en el móvil */
+        .card.bio-card {
+            padding: 20px;
+            margin: 10px;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
 
-<div class="header-banner">
-    <p style="font-size: 0.7rem; margin: 0;">PROYECTO AMBIENTAL 2026</p>
-    <h1>Ciencia, mar y coraje: El legado de Anita Conti</h1>
-</div>
+<div class="app-wrapper">
+    <header class="main-header">
+        <div class="header-content">
+            <span class="header-badge">PROYECTO AMBIENTAL 2026</span>
+            <div class="profile-section">
+                <img src="anita.jpg" alt="Anita Conti" class="profile-img">
+                <div class="profile-info">
+                    <h1>Anita Conti</h1>
+                    <p class="subtitle">Oceanógrafa</p>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<div class="main-container">
-    <div class="col-left">
-        <section class="card">
+    <main class="content-container">
+        <section class="card bio-card">
             <h3>BIOGRAFÍA</h3>
-            <p>Fue una destacada oceanógrafa, fotógrafa y escritora francesa, reconocida como la primera mujer en ejercer profesionalmente la oceanografía en su país. A lo largo de su carrera documentó la vida en alta mar, denunciando los peligros de la pesca industrial descontrolada.</p>
+            <p>Fue una destacada oceanógrafa, fotógrafa y escritora francesa, reconocida como la primera mujer en ejercer profesionalmente la oceanografía en su país. A lo largo de su extensa carrera, se dedicó a documentar la vida en alta mar, participando en numerosas expediciones...</p>
         </section>
 
-        <section class="card">
+        <section class="card gallery-card">
             <h3>REGISTRO FOTOGRÁFICO</h3>
             <div class="gallery-grid">
                 <img src="images.jfif" alt="Foto 1">
@@ -69,31 +67,11 @@
                 <img src="cuenca.jpg" alt="Foto 5">
             </div>
         </section>
-    </div>
-
-    <div class="col-right">
-        <section class="card">
-            <h3>INSTITUCIÓN Y AUTORES</h3>
-            <p><strong>Colegio:</strong> U.E. Tulio Febres Cordero</p>
-            <p><strong>Grado:</strong> 5to Año "B"</p>
-        </section>
-
-        <section class="card">
-            <h3>ASPECTOS RELEVANTES</h3>
-            <p>• Primera mujer en barcos de pesca árticos.<br>• Documentó el agotamiento de recursos.<br>• Pionera en la fotografía científica marina.</p>
-        </section>
-
-        <section class="card">
-            <h3>CONTEXTO VENEZOLANO</h3>
-            <p>Identificación de zonas de surgencia en la Cuenca de Cariaco mediante el uso de datos térmicos para la pesca artesanal.</p>
-        </section>
-
-        <section class="card">
-            <h3>CONCLUSIONES</h3>
-            <p>La soberanía alimentaria depende de la gestión científica del acceso a los recursos marinos para evitar el estrés climático.</p>
-        </section>
-    </div>
+    </main>
 </div>
+
+</body>
+</html>
 
 </body>
 </html>
