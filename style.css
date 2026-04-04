@@ -147,39 +147,4 @@ p, li { font-size: 0.85rem; line-height: 1.3; }
     .main-photo { width: 60px; height: 60px; }
 }
 
-@media print {
-    /* Mantenemos el fondo azul y los colores */
-    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-    
-    @page { size: landscape; margin: 0; } /* Hoja horizontal como la de Boyan */
 
-    body { overflow: visible !important; height: auto !important; }
-
-    /* ESTO ES LO IMPORTANTE: Mantiene tus dos columnas */
-    .content-layout {
-        display: flex !important;
-        flex-direction: row !important; /* Mantiene izquierda y derecha */
-        width: 100% !important;
-        gap: 15px !important;
-    }
-
-    .col-left { width: 30% !important; display: block !important; }
-    .col-right { width: 70% !important; display: block !important; }
-
-    /* Ajustamos el tamaño para que llene la hoja sin desordenar */
-    .card {
-        padding: 15px !important;
-        margin-bottom: 10px !important;
-    }
-
-    /* Fotos en su lugar y de buen tamaño */
-    .galeria-fotos {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        gap: 8px !important;
-    }
-    .galeria-fotos img {
-        width: 110px !important;
-        height: 110px !important;
-    }
-}
