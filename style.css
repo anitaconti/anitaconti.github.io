@@ -147,4 +147,43 @@ p, li { font-size: 0.85rem; line-height: 1.3; }
     .main-photo { width: 60px; height: 60px; }
 }
 
+@media print {
+    /* Esto elimina los bordes blancos de la hoja y aprovecha todo el espacio */
+    @page {
+        margin: 0;
+    }
 
+    body {
+        height: auto !important;
+        overflow: visible !important;
+        background: white !important;
+    }
+
+    /* Esto hace que las casillas se estiren al ancho de la hoja como en el de Boyan Slat */
+    .app-wrapper, .content-layout, .col-left, .col-right, .card {
+        display: block !important;
+        width: 100% !important;
+        max-width: none !important;
+        margin: 10px 0 !important;
+        padding: 20px !important;
+        box-shadow: none !important;
+    }
+
+    /* Esto agranda la letra para que se vea profesional y no pequeña */
+    h1 { font-size: 32pt !important; text-align: center; margin-bottom: 20px; }
+    h3 { font-size: 22pt !important; margin-bottom: 15px; border-bottom: 2px solid #0080b0; }
+    p, li { font-size: 14pt !important; line-height: 1.6; }
+
+    /* Esto asegura que tus 6 imágenes salgan grandes y alineadas */
+    .galeria-fotos {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px !important;
+    }
+    .galeria-fotos img {
+        width: 180px !important;
+        height: 180px !important;
+        object-fit: cover !important;
+    }
+}
